@@ -1,0 +1,64 @@
+{
+	"menu":[
+	{
+		"name":"Bacon Lover",
+		"type":"burger",
+		"description":"Burger au Bacon",
+		"image":"https://www.hamburgerfinder.fr/wp-content/uploads/Burger-King-Bacon-Lover-Double.jpg"
+	},
+	{
+		"name":"Big Tasty",
+		"type":"burger",
+		"description":"Burger à l'Emmental Fondu",
+		"image":"https://www.hamburgerfinder.fr/wp-content/uploads/McDonalds-Big-Tasty.jpg"
+	},
+	{
+		"name":"Big King",
+		"type":"burger",
+		"description":"Burger avec double tranche de boeuf",
+		"image":"http://1.bp.blogspot.com/-1M93aSgS9O4/VV63votGc3I/AAAAAAAAAEQ/3DFc9K0pSQU/s1600/big%2Bking.JPG"
+	},
+	{
+		"name":"Reine",
+		"type":"pizza",
+		"description":"Jambon, Champignons, Emmental, Olives, Origan",
+		"image":"https://img.cuisineaz.com/660x660/2016-04-28/i96018-pizza-reine.jpg"
+	},
+	{
+		"name":"Calzone",
+		"type":"pizza",
+		"description":"Jambon, Champignons, Oeuf, Emmental, Olives, Origan",
+		"image":"https://assets.afcdn.com/recipe/20161130/7916_w1024h1024c1cx2808cy1872.webp"
+	},
+	{
+		"name":"Tacos S",
+		"type":"tacos",
+		"description":"Viande Hachée, Nuggets, Cordon Bleu, Falafel, Merguez, Tenders (1 viande au choix)",
+		"image":"https://o-tacos.com/assets/img/tacos/steps/Trois-Tacos-avion.jpg"
+	},
+	{
+		"name":"Tacos M",
+		"type":"tacos",
+		"description":"Viande Hachée, Nuggets, Cordon Bleu, Falafel, Merguez, Tenders (2 viandes au choix)",
+		"image":"https://o-tacos.com/assets/img/tacos/steps/Trois-Tacos-avion.jpg"
+	},
+	{
+		"name":"Tacos L",
+		"type":"tacos",
+		"description":"Viande Hachée, Nuggets, Cordon Bleu, Falafel, Merguez, Tenders (3 viandes au choix)",
+		"image":"https://o-tacos.com/assets/img/tacos/steps/Trois-Tacos-avion.jpg"
+	},
+	{
+		"name":"Panini Chorizo",
+		"type":"panini",
+		"description":"Poivron, tomates, Chorizo, Mozzarella",
+		"image":"https://www.lecroquet.com/wp-content/uploads/2017/05/panini-chorizo-1600x1000.jpg"
+	},
+	{
+		"name":"Panini Poulet",
+		"type":"panini",
+		"description":"Poulet, Emmental, Tomates, Huile d'olive",
+		"image":"https://img.cuisineaz.com/610x610/2018-07-23/i141053-panini-poulet-mozzarella.jpeg"
+	}
+	]
+}
