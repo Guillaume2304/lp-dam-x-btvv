@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetXam.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,6 +14,12 @@ namespace ProjetXam.Views
         public MenusPage()
         {
             InitializeComponent();
+            BindingContext = new MenusViewModel();
+        }
+
+        protected override void OnAppearing()
+        {
+
         }
     }
 }
