@@ -4,13 +4,12 @@
              x:Class="ProjetXam.Views.MenusPage">
 
     <StackLayout>
-        <ListView ItemsSource="{Binding Menus}" RowHeight="100">
+        <ListView SelectedItem="{Binding MenuSelected, Mode=TwoWay}" ItemsSource="{Binding TypeMenus}" RowHeight="100">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal" Padding="5">
-                            <Image HeightRequest="100" WidthRequest="100" Source="{Binding Image}" HorizontalOptions="Start"/>
-                            <Label HeightRequest="100" Text="{Binding Name}" HorizontalOptions="StartAndExpand" FontSize="24"/>
+                        <StackLayout Orientation="Horizontal" >
+                            <Label Text="{Binding .}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="50"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

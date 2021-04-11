@@ -1,44 +1,51 @@
 ﻿using Newtonsoft.Json;
 using ProjetXam.Models;
 using ProjetXam.Services;
+using ProjetXam.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace ProjetXam.ViewModels
 {
     class MenusViewModel : BaseViewModel
     {
-        ObservableCollection<Menu> menus = new ObservableCollection<Menu>();
-        Menu menuSelected;
+        ObservableCollection<Models.Menu> menus = new ObservableCollection<Models.Menu>();
 
-        public Menu MenuSelected
+        ObservableCollection<string> typeMenus = new ObservableCollection<string>();
+        string menuSelected;
+
+        public string MenuSelected
         {
             get { return menuSelected; }
-            set { SetProperty(ref menuSelected, value); }
+            set { 
+                SetProperty(ref menuSelected, value);
+                if(value != null)
+                {
+                    Device.BeginInvokeOnMainThread(async () =>
+                    {
+                        await Application.Current.MainPage.Navigation.PushAsync(new PlatsPage(MenuSelected));
+                        MenuSelected = null;
+                    });
+                }
+            }
         }
 
-        public ObservableCollection<Menu> Menus
+        public ObservableCollection<string> TypeMenus
         {
-            get { return menus; }
-            set { SetProperty(ref menus, value); }
+            get { return typeMenus; }
+            set { SetProperty(ref typeMenus, value); }
         }
 
         public MenusViewModel()
         {
-            _ = getMenusApi();
+            TypeMenus.Add("Burger");
+            TypeMenus.Add("Pizza");
+            TypeMenus.Add("Tacos");
+            TypeMenus.Add("Panini");
         }
-
-        private async Task getMenusApi()
-        {
-            var client = HttpService.getInstance();
-            var result = await client.GetAsync("https://raw.githubusercontent.com/Guillaume2304/lp-dam-x-btvv/main/menu2.json");
-            var serializedResponse = await result.Content.ReadAsStringAsync();
-            Menus = JsonConvert.DeserializeObject<ObservableCollection<Menu>>(serializedResponse);
-        }
-
-        
     }
 }

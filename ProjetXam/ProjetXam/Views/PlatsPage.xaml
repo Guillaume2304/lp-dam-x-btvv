@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetXam.Views.PlatsPage">
+    <StackLayout>
+        <ListView SelectedItem="{Binding MenuSelected, Mode=TwoWay}" ItemsSource="{Binding Menus}" RowHeight="100">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <Image HeightRequest="100" WidthRequest="100" Source="{Binding Image}" HorizontalOptions="Start"/>
+                            <Label HeightRequest="100" Text="{Binding Name}" HorizontalOptions="StartAndExpand" FontSize="24"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
