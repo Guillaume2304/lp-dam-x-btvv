@@ -6,12 +6,12 @@
     <ContentPage.Content>
         <StackLayout Padding="0,50,0,0">
             <Label Text="Adresse" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"></Label>
-            <local:CustomEntry />
+            <local:CustomEntry Text="{Binding AdressEntered}" />
             <Label Text="Nom" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"></Label>
-            <local:CustomEntry />
+            <local:CustomEntry Text="{Binding NameEntered}"/>
             <Label Text="Prénom" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"></Label>
-            <local:CustomEntry />
-            <Button Text="Valider" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"></Button>
+            <local:CustomEntry Text="{Binding FirstNameEntered}"/>
+            <Button Text="Valider" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Command="{Binding SaveData}"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
