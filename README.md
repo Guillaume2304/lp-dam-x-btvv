@@ -13,3 +13,6 @@ L'objectif de ce projet est de proposer une application qui permette de commande
 - affichage détail : un affichage détaillé (description) de chaque plat/aliment
 - formulaire livraison : une page dédiée aux informations nécessaires à la livraison (modifiables) 
 - un menu de navigation
+
+# Diapo
+https://docs.google.com/presentation/d/1FmeSV6NHYuY7ZQl6Lnhb0BCTyr7dffGmYJeqyU06ja4/edit?usp=sharing
