@@ -3,5 +3,7 @@
   <PropertyGroup>
     <SelectedDevice>Samsung SM-G930F</SelectedDevice>
     <ActiveDebugProfile>Samsung SM-G930F</ActiveDebugProfile>
+    <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
+    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>
 </Project>

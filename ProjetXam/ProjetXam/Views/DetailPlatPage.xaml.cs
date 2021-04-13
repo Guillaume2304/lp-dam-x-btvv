@@ -1,20 +1,22 @@
 ﻿using ProjetXam.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace ProjetXam.Views
 {
-    public partial class MenusPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class DetailPlatPage : ContentPage
     {
-        public MenusPage()
+        public DetailPlatPage(Models.Menu menuSelected)
         {
             InitializeComponent();
-            BindingContext = new MenusViewModel();
+            BindingContext = new DetailPlatViewModel(menuSelected);
         }
     }
 }

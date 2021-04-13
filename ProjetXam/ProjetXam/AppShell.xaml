@@ -13,7 +13,7 @@
         </Tab>
 
         <Tab Title="Livraison" Icon="ic_action_delivery_dining.png">
-            <ShellContent>
+            <ShellContent>  
                 <local:LivraisonPage Title="Livraison"/>
             </ShellContent>
         </Tab>
