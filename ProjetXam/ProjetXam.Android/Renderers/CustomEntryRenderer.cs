@@ -28,11 +28,11 @@ namespace ProjetXam.Droid
                 Control.SetPadding(50, Control.PaddingTop, Control.PaddingRight, Control.PaddingBottom);
 
 
-                IntPtr IntPtrtextViewClass = JNIEnv.FindClass(typeof(CustomEntry));
-                IntPtr mCursorDrawableResProperty = JNIEnv.GetFieldID(IntPtrtextViewClass, "mCursorDrawableRes", "I");
+                //IntPtr IntPtrtextViewClass = JNIEnv.FindClass(typeof(CustomEntry));
+                //IntPtr mCursorDrawableResProperty = JNIEnv.GetFieldID(IntPtrtextViewClass, "mCursorDrawableRes", "I");
 
                 // my_cursor is the xml file name which we defined above
-                JNIEnv.SetField(Control.Handle, mCursorDrawableResProperty, Resource.Drawable.my_cursor);
+                //JNIEnv.SetField(Control.Handle, mCursorDrawableResProperty, Resource.Drawable.my_cursor);
             }
         }
     }

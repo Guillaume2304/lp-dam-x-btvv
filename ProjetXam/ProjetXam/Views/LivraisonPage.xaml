@@ -4,9 +4,14 @@
              x:Class="ProjetXam.Views.LivraisonPage"
              xmlns:local="clr-namespace:ProjetXam;assembly=ProjetXam">
     <ContentPage.Content>
-        <StackLayout>
-            <Entry/>
-            <local:CustomEntry/>
+        <StackLayout Padding="0,50,0,0">
+            <Label Text="Adresse" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"></Label>
+            <local:CustomEntry />
+            <Label Text="Nom" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"></Label>
+            <local:CustomEntry />
+            <Label Text="Prénom" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"></Label>
+            <local:CustomEntry />
+            <Button Text="Valider" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
