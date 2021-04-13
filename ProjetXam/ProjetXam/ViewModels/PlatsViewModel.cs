@@ -1,19 +1,21 @@
 ﻿using Newtonsoft.Json;
-using ProjetXam.Models;
+using Menu = ProjetXam.Models.Menu;
 using ProjetXam.Services;
+using ProjetXam.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace ProjetXam.ViewModels
 {
     class PlatsViewModel : BaseViewModel
     {
         ObservableCollection<Menu> menus = new ObservableCollection<Menu>();
-        string menuSelected;
-        Menu menu = new Menu();
+        string typeMenuSelected;
+        Menu menuSelected = new Menu();
 
         public ObservableCollection<Menu> Menus
         {
@@ -21,15 +23,24 @@ namespace ProjetXam.ViewModels
             set { SetProperty(ref menus, value); }
         }
 
-        public Menu Menu
+        public Menu MenuSelected
         {
-            get { return menu; }
-            set { SetProperty(ref menu, value); }
+            get { return menuSelected; }
+            set { 
+                SetProperty(ref menuSelected, value);
+                if(value != null)
+                {
+                    Device.BeginInvokeOnMainThread(async () =>
+                    {
+                        await Application.Current.MainPage.Navigation.PushAsync(new DetailPlatPage(MenuSelected));
+                    });
+                }
+            }
         }
 
-        public PlatsViewModel(string menuSelected)
+        public PlatsViewModel(string typeMenuSelected)
         {
-            this.menuSelected = menuSelected.ToLower();
+            this.typeMenuSelected = typeMenuSelected.ToLower();
             _ = getMenusApi();
         }
 
@@ -41,7 +52,7 @@ namespace ProjetXam.ViewModels
             ObservableCollection<Menu> menusResponse = JsonConvert.DeserializeObject<ObservableCollection<Menu>>(serializedResponse);
             foreach(Menu menu in menusResponse)
             {
-                if(menu.Type == menuSelected)
+                if(menu.Type == typeMenuSelected)
                 {
                     Menus.Add(menu);
                 }

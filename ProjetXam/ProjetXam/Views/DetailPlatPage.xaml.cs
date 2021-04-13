@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetXam.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,10 @@ namespace ProjetXam.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetailPlatPage : ContentPage
     {
-        public DetailPlatPage()
+        public DetailPlatPage(Models.Menu menuSelected)
         {
             InitializeComponent();
+            BindingContext = new DetailPlatViewModel(menuSelected);
         }
     }
 }

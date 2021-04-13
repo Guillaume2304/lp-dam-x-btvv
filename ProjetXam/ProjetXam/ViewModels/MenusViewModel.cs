@@ -16,19 +16,19 @@ namespace ProjetXam.ViewModels
         ObservableCollection<Models.Menu> menus = new ObservableCollection<Models.Menu>();
 
         ObservableCollection<string> typeMenus = new ObservableCollection<string>();
-        string menuSelected;
+        string typeMenuSelected;
 
-        public string MenuSelected
+        public string TypeMenuSelected
         {
-            get { return menuSelected; }
+            get { return typeMenuSelected; }
             set { 
-                SetProperty(ref menuSelected, value);
+                SetProperty(ref typeMenuSelected, value);
                 if(value != null)
                 {
                     Device.BeginInvokeOnMainThread(async () =>
                     {
-                        await Application.Current.MainPage.Navigation.PushAsync(new PlatsPage(MenuSelected));
-                        MenuSelected = null;
+                        await Application.Current.MainPage.Navigation.PushAsync(new PlatsPage(TypeMenuSelected));
+                        TypeMenuSelected = null;
                     });
                 }
             }

@@ -13,10 +13,10 @@ namespace ProjetXam.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PlatsPage : ContentPage
     {
-        public PlatsPage(string menuSelected)
+        public PlatsPage(string typeMenuSelected)
         {
             InitializeComponent();
-            BindingContext = new PlatsViewModel(menuSelected);
+            BindingContext = new PlatsViewModel(typeMenuSelected);
         }
     }
 }

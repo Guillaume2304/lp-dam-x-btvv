@@ -4,7 +4,7 @@
              x:Class="ProjetXam.Views.MenusPage">
 
     <StackLayout>
-        <ListView SelectedItem="{Binding MenuSelected, Mode=TwoWay}" ItemsSource="{Binding TypeMenus}" RowHeight="100">
+        <ListView SelectedItem="{Binding TypeMenuSelected, Mode=TwoWay}" ItemsSource="{Binding TypeMenus}" RowHeight="100">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
