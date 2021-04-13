@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:ProjetXam.Views"
@@ -19,28 +18,4 @@
             </ShellContent>
         </Tab>
     </TabBar>
-
-=======
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<Shell xmlns="http://xamarin.com/schemas/2014/forms"
-       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:ProjetXam.Views"
-       Title="ProjetXam"
-       x:Class="ProjetXam.AppShell">
-
-    <TabBar>
-        <Tab Title="Menus" Icon="ic_action_lunch_dining.png">
-            <ShellContent>
-                <local:MenusPage Title="Menus"/>
-            </ShellContent>
-        </Tab>
-
-        <Tab Title="Livraison" Icon="ic_action_delivery_dining.png">
-            <ShellContent>  
-                <local:LivraisonPage Title="Livraison"/>
-            </ShellContent>
-        </Tab>
-    </TabBar>
-
->>>>>>> test
 </Shell>

@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProjetXam.Views.DetailPlatPage">
@@ -8,15 +7,4 @@
         <Label Text="{Binding Nom}" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" FontSize="50" TextColor="Black" Padding="10"/>
         <Label Text="{Binding Description}" VerticalOptions="Start" Margin="10, 0"/>
     </StackLayout>
-=======
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProjetXam.Views.DetailPlatPage">
-    <StackLayout Padding="5">
-        <Image Source="{Binding Image}" HorizontalOptions="CenterAndExpand"/>
-        <Label Text="{Binding Nom}" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" FontSize="50" TextColor="Black" Padding="10"/>
-        <Label Text="{Binding Description}" VerticalOptions="Start" Margin="10, 0"/>
-    </StackLayout>
->>>>>>> test
 </ContentPage>
